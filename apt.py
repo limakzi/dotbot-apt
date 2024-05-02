@@ -9,9 +9,10 @@ class Apt(dotbot.Plugin):
         return directive == "apt"
 
     def handle(self, directive: str, packages: List[str]) -> bool:
-        success = self._run(["apt", "update"], "Updating APT") \
-                  and self._run(["apt", "install", "-y"] + packages,
-                                "Installing the APT packages: {}".format(", ".join(packages)))
+        success = self._run(["apt", "update"], "Updating APT") and self._run(
+            ["apt", "install", "-y"] + packages,
+            "Installing the APT packages: {}".format(", ".join(packages)),
+        )
 
         if success:
             self._log.info("APT packages installed successfully")
