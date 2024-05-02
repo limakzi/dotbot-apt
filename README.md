@@ -1,4 +1,4 @@
-# Dotbot APT Plugin
+## dotbot-apt
 
 Easily install APT packages with [dotbot](https://github.com/anishathalye/dotbot).
 
