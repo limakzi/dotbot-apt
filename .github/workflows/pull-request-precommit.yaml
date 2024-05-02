@@ -1,4 +1,5 @@
 ---
+
 name: pre-commit
 run-name: pre-commit-${{ github.event.number }} ${{ github.event.pull_request.title }}
 on:
